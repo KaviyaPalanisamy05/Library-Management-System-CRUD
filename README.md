@@ -23,3 +23,18 @@ To run this project, you need the following:
 2. **MySQL** database server.
 3. **Apache** or any other PHP server.
 4. **Bootstrap** and **jQuery** (included via CDN).
+5. Run this query to create database and table
+
+CREATE DATABASE IF NOT EXISTS library_db;
+
+USE library_db;
+
+CREATE TABLE lend (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  book_name VARCHAR(255) NOT NULL,
+  author_name VARCHAR(255) NOT NULL,
+  customer_name VARCHAR(255) NOT NULL,
+  return_date DATE NOT NULL,
+  price DECIMAL(10, 2) NOT NULL
+);
+
